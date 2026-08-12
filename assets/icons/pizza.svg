@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <g stroke="#3A2D1C" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Pizzastück -->
+    <path d="M 120 170 L 392 170 L 264 424 A 12 12 0 0 1 248 424 Z" fill="#C9A227" />
+
+    <!-- Kruste -->
+    <rect x="102" y="128" width="308" height="52" rx="26" fill="#F6EBD4" />
+
+    <!-- Salami -->
+    <circle cx="205" cy="238" r="24" fill="#A33B2A" />
+    <circle cx="305" cy="240" r="22" fill="#A33B2A" />
+    <circle cx="256" cy="330" r="22" fill="#A33B2A" />
+
+    <!-- Basilikum -->
+    <circle cx="238" cy="290" r="11" fill="#5C7A29" />
+    <circle cx="300" cy="310" r="10" fill="#5C7A29" />
+
+  </g>
+</svg>

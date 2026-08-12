@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <g stroke="#3A2D1C" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Grundform des Kuchenstücks -->
+    <path d="M 158 200 L 354 200 A 18 18 0 0 1 372 219 L 356 400 A 18 18 0 0 1 338 416
+             L 174 416 A 18 18 0 0 1 156 400 L 140 219 A 18 18 0 0 1 158 200 Z"
+          fill="#F6EBD4" />
+
+    <!-- Obere Kakao-Schicht -->
+    <path d="M 158 200 L 354 200 A 18 18 0 0 1 372 219 L 368 265 L 144 265 L 140 219
+             A 18 18 0 0 1 158 200 Z"
+          fill="#3A2D1C" stroke="none" />
+
+    <!-- Mittlere Biskuit-Schicht -->
+    <path d="M 149 320 L 363 320 L 359 370 L 153 370 Z" fill="#6B4E2E" stroke="none" />
+
+    <!-- Trennlinien zwischen den Schichten -->
+    <path d="M 144 265 L 368 265" fill="none" />
+    <path d="M 149 320 L 363 320" fill="none" />
+    <path d="M 153 370 L 359 370" fill="none" />
+
+    <!-- Umriss erneut, damit die Kanten sauber bleiben -->
+    <path d="M 158 200 L 354 200 A 18 18 0 0 1 372 219 L 356 400 A 18 18 0 0 1 338 416
+             L 174 416 A 18 18 0 0 1 156 400 L 140 219 A 18 18 0 0 1 158 200 Z"
+          fill="none" />
+
+  </g>
+</svg>

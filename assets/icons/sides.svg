@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <g stroke="#3A2D1C" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Pommes -->
+    <rect x="190" y="150" width="34" height="170" rx="13" fill="#F6EBD4"
+          transform="rotate(-12 207 235)" />
+    <rect x="232" y="120" width="34" height="200" rx="13" fill="#F6EBD4"
+          transform="rotate(-4 249 220)" />
+    <rect x="274" y="126" width="34" height="194" rx="13" fill="#F6EBD4"
+          transform="rotate(4 291 223)" />
+    <rect x="316" y="158" width="34" height="162" rx="13" fill="#F6EBD4"
+          transform="rotate(12 333 239)" />
+
+    <!-- Tüte -->
+    <path d="M 158 250 L 354 250 L 328 434 A 18 18 0 0 1 310 450 L 202 450 A 18 18 0 0 1 184 434 Z"
+          fill="#C9A227" />
+
+    <!-- Heller Streifen auf der Tüte -->
+    <path d="M 165 300 L 347 300 L 341 345 L 171 345 Z" fill="#F6EBD4" stroke="none" />
+    <path d="M 165 300 L 347 300" fill="none" />
+    <path d="M 171 345 L 341 345" fill="none" />
+
+    <!-- Tüten-Umriss erneut, damit die Kanten sauber bleiben -->
+    <path d="M 158 250 L 354 250 L 328 434 A 18 18 0 0 1 310 450 L 202 450 A 18 18 0 0 1 184 434 Z"
+          fill="none" />
+
+  </g>
+</svg>

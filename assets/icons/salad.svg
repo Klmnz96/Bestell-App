@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <g stroke="#3A2D1C" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Salatblätter -->
+    <ellipse cx="196" cy="222" rx="62" ry="44" fill="#5C7A29" />
+    <ellipse cx="316" cy="228" rx="56" ry="40" fill="#7D9B3F" />
+    <circle cx="256" cy="252" r="30" fill="#A33B2A" />
+
+    <!-- Schüssel -->
+    <path d="M 106 288 Q 256 448 406 288 Z" fill="#F6EBD4" />
+
+    <!-- Rand -->
+    <rect x="94" y="268" width="324" height="36" rx="18" fill="#C9A227" />
+
+  </g>
+</svg>

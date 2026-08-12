@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+:root {
+  /* Marke */
+  --color-primary: #c9a227; /* Senfgelb, Kategorie-Balken und Header */
+  --color-primary-dark: #9c7b18; /* dunklere Variante, für Hover */
+  --color-primary-light: #e3c565; /* hellere Variante, für Ränder */
+
+  /* Braun */
+  --color-brown: #3a2d1c; /* Dunkelbraun, Konturen und Akzente */
+  --color-dark: #241a10; /* sehr dunkel, Hintergrund vom Warenkorb */
+
+  /* Flächen */
+  --color-background: #fdf9ef; /* Seitenhintergrund, warmes Creme */
+  --color-surface: #f6ebd4; /* Karten und Gerichte-Boxen */
+  --color-border: #e3d7bc; /* dezente Trennlinien */
+
+  /* Text */
+  --color-text: #2e2418; /* normaler Fließtext */
+  --color-text-muted: #7a6a54; /* Beschreibungen, Nebeninfos */
+  --color-text-light: #fdf9ef; /* Text auf dunklem Hintergrund */
+
+  /* Buttons */
+  --color-button: #c9a227;
+  --color-button-text: #241a10;
+  --color-button-hover: #9c7b18;
+  --color-button-hover-text: #fdf9ef;
+
+  /* Status */
+  --color-danger: #a33b2a; /* Löschen, Papierkorb */
+  --color-success: #5c7a29; /* Bestätigung nach dem Bestellen */
+
+  /* Schriftarten */
+  --font-heading: "Bricolage Grotesque", sans-serif;
+  --font-body: "Figtree", sans-serif;
+}
