@@ -1,6 +1,7 @@
 let menu = [
   {
     category: "Burger & Sandwiches",
+    slug: "burger",
     icon: "assets/icons/burger.svg",
     dishes: [
       {
@@ -37,6 +38,7 @@ let menu = [
   },
   {
     category: "Pizza (30 cm)",
+    slug: "pizza",
     icon: "assets/icons/pizza.svg",
     dishes: [
       {
@@ -72,6 +74,7 @@ let menu = [
   },
   {
     category: "Salate",
+    slug: "salate",
     icon: "assets/icons/salad.svg",
     dishes: [
       {
@@ -109,6 +112,7 @@ let menu = [
   },
   {
     category: "Beilagen",
+    slug: "beilagen",
     icon: "assets/icons/sides.svg",
     dishes: [
       {
@@ -143,6 +147,7 @@ let menu = [
   },
   {
     category: "Nachspeisen",
+    slug: "nachspeisen",
     icon: "assets/icons/desserts.svg",
     dishes: [
       {
@@ -177,6 +182,7 @@ let menu = [
   },
   {
     category: "Getränke",
+    slug: "getraenke",
     icon: "assets/icons/drinks.svg",
     dishes: [
       {

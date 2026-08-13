@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <g stroke="#3A2D1C" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Haube -->
+    <path d="M 96 322 A 160 150 0 0 1 416 322 Z" fill="#F6EBD4" />
+
+    <!-- Knauf -->
+    <circle cx="256" cy="152" r="28" fill="#C9A227" />
+
+    <!-- Sockel -->
+    <rect x="72" y="316" width="368" height="58" rx="29" fill="#C9A227" />
+
+  </g>
+</svg>

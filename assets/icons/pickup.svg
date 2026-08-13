@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <g stroke="#3A2D1C" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Henkel -->
+    <path d="M 194 196 A 62 62 0 0 1 318 196" fill="none" />
+
+    <!-- Tüte -->
+    <path d="M 112 196 L 400 196 L 374 434 A 24 24 0 0 1 350 456 L 162 456 A 24 24 0 0 1 138 434 Z"
+          fill="#F6EBD4" />
+
+    <!-- Umschlagkante -->
+    <path d="M 118 254 L 394 254" fill="none" />
+
+  </g>
+</svg>

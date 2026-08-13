@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <g stroke="#3A2D1C" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Laderaum -->
+    <rect x="42" y="168" width="286" height="184" rx="22" fill="#F6EBD4" />
+
+    <!-- Fahrerhaus -->
+    <path d="M 328 236 L 396 236 L 462 302 L 462 330 A 22 22 0 0 1 440 352 L 328 352 Z"
+          fill="#C9A227" />
+
+    <!-- Fenster -->
+    <path d="M 356 258 L 392 258 L 424 292 L 356 292 Z" fill="#F6EBD4" />
+
+    <!-- Räder -->
+    <circle cx="146" cy="380" r="44" fill="#6B4E2E" />
+    <circle cx="398" cy="380" r="44" fill="#6B4E2E" />
+
+  </g>
+</svg>

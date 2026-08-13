@@ -5,13 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bestell-App</title>
 
-    <link rel="icon" type="image/png" href="./assets/img/logo-burger.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/img/logo-burger.svg" />
     <link rel="stylesheet" href="./style/fonts.css" />
     <link rel="stylesheet" href="./style/standard.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./style/basket.css" />
   </head>
   <body>
+    <header class="site-header">
+      <div class="container">
+        <img
+          class="header-logo"
+          src="./assets/icons/cloche.svg"
+          alt="Header-Logo"
+        />
+        <p class="tag-line"><span class="accent">Bestell</span>App</p>
+        <img class="header-menu" src="./assets/icons/menu.svg" alt="Menu" />
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="hero-section">
+        <img
+          src="./assets/img/hero-img.jpg"
+          alt="Burger und Pizzen auf Holztisch"
+          class="hero-img"
+        />
+        <img
+          src="./assets/img/logo-burger.svg"
+          alt="Hero-Logo"
+          class="hero-logo"
+        />
+        <h1 class="hero-headline">
+          The <span class="hero-span">Golden </span>Bite
+        </h1>
+        <p class="hero-tagline">Jeder Bissen wie beim ersten Mal.</p>
+        <div class="hero-rating">
+          <img src="./assets/icons/star.svg" alt="" />
+          <span class="rating-value">4,1</span>
+          <span class="rating-count">(317 Bewertungen)</span>
+        </div>
+        <p class="hero-delivery">
+          Lieferkosten 4,99 € &middot; Lieferzeit 30 bis 45 Minuten &middot;
+          Mindestbestellwert 15 €
+        </p>
+      </div>
+      <nav class="category-nav" id="category-nav">
+        <!-- JS rendert die Links-->
+        <a href="#burger">Burger</a>
+        <a href="#pizza">Pizza</a>
+        <a href="#salate">Salate</a>
+        <a href="#beilagen">Beilagen</a>
+        <a href="#getraenke">Getränke</a>
+        <a href="#nachspeisen">Nachspeisen</a>
+      </nav>
+      <div class="content-wrapper">
+        <section class="menu" id="menu">
+          <!--JS rendert die Kategorien-->
+          <section class="category" id="burger">
+            <div class="category-bar">
+              <img src="./assets/icons/burger.svg" alt="" />
+              <h2>Burger & Sandwiches</h2>
+            </div>
+
+            <div class="dish-list">
+              <article class="dish">
+                <img
+                  src="./assets/img/veggie-burger.jpg"
+                  alt="Veggie-Burger"
+                  class="dish-img"
+                />
+                <div class="dish-info">
+                  <h3 class="dish-name">Veggie Mushroom Black Burger</h3>
+                  <p class="dish-description">
+                    Gemischter Blattsalat, Tomaten, Edamame und Champignons
+                  </p>
+                </div>
+                <span class="dish-price">16,90 €</span>
+                <button class="add-btn">Zum Warenkorb</button>
+              </article>
+            </div>
+          </section>
+        </section>
+        <aside class="basket-wrapper" id="basket-wrapper">
+          <button class="basket-close">
+            <img
+              src="./assets/icons/close.svg"
+              alt="Schließen"
+              class="basket-close"
+            />
+          </button>
+          <!--Warenkorb-->
+          <h2>Dein Warenkorb</h2>
+          <div class="delivery-toggle">
+            <button class="toggle-btn active" id="delivery-btn">
+              <img src="./assets/icons/delivery.svg" alt="" />
+              Liefern
+            </button>
+            <button class="toggle-btn" id="pickup-btn">
+              <img src="./assets/icons/pickup.svg" alt="" />
+              Abholen
+            </button>
+          </div>
+          <ul class="basket-list" id="basket-list">
+            <li class="basket-item">
+              <p class="basket-item-name">Veggie Mushroom Black Burger</p>
+              <div class="basket-item-row">
+                <div class="quantity">
+                  <button class="quantity-btn">
+                    <img src="./assets/icons/minus.svg" alt="Weniger" />
+                  </button>
+                  <span class="quantity-number">1</span>
+                  <button class="quantity-btn">
+                    <img src="./assets/icons/plus.svg" alt="Mehr" />
+                  </button>
+                </div>
+                <span class="basket-item-price">16,90 €</span>
+                <button class="basket-item-delete">
+                  <img src="./assets/icons/trash.svg" alt="Entfernen" />
+                </button>
+              </div>
+            </li>
+          </ul>
+          <div class="basket-summary">
+            <p>Zwischensumme <span id="subtotal">36,70 €</span></p>
+            <p>Lieferkosten <span id="delivery-fee">4,99 €</span></p>
+            <p>Gesamt <span id="total">41,69 €</span></p>
+          </div>
+          <button class="buy-btn">Jetzt bestellen</button>
+        </aside>
+      </div>
+    </main>
+
+    <div class="mobile-basket-bar">
+      <button class="mobile-basket-btn" id="mobile-basket-btn">
+        <img src="./assets/icons/cart.svg" alt="" />
+        <span class="basket-count" id="basket-count">3</span>
+        Warenkorb ansehen
+        <span id="mobile-basket-total">41,69 €</span>
+      </button>
+    </div>
+
+    <div class="confirmation" id="confirmation">
+      <button class="confirmation-close">
+        <img src="./assets/icons/close.svg" alt="Schließen" />
+      </button>
+      <img src="./assets/icons/delivery.svg" alt="" class="confirmation-icon" />
+      <h2>Bestellung bestätigt</h2>
+      <p>Das war eine Testbestellung, dein Essen ist nicht unterwegs.</p>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 The Golden Bite</p>
+        <nav class="footer-nav">
+          <a href="./html/impressum.html">Impressum</a>
+          <a href="./html/cookies.html">Cookie-Einstellungen</a>
+        </nav>
+      </div>
+    </footer>
+
     <script src="./script/data.js"></script>
     <script src="./script/template.js"></script>
     <script src="script.js"></script>
