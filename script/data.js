@@ -2,6 +2,7 @@ let menu = [
   {
     category: "Burger & Sandwiches",
     slug: "burger",
+    navLabel: "Burger",
     icon: "assets/icons/burger.svg",
     dishes: [
       {
@@ -39,6 +40,7 @@ let menu = [
   {
     category: "Pizza (30 cm)",
     slug: "pizza",
+    navLabel: "Pizza",
     icon: "assets/icons/pizza.svg",
     dishes: [
       {
@@ -59,8 +61,7 @@ let menu = [
         id: 7,
         name: "Pizza Funghi",
         price: 12.9,
-        description:
-          "Rote Zwiebeln, Oliven, braune Champignons und Mozzarella",
+        description: "Rote Zwiebeln, Oliven, braune Champignons und Mozzarella",
         image: "assets/img/pizza-funghi.jpg",
       },
       {
@@ -75,6 +76,7 @@ let menu = [
   {
     category: "Salate",
     slug: "salate",
+    navLabel: "Salate",
     icon: "assets/icons/salad.svg",
     dishes: [
       {
@@ -113,6 +115,7 @@ let menu = [
   {
     category: "Beilagen",
     slug: "beilagen",
+    navLabel: "Beilagen",
     icon: "assets/icons/sides.svg",
     dishes: [
       {
@@ -148,6 +151,7 @@ let menu = [
   {
     category: "Nachspeisen",
     slug: "nachspeisen",
+    navLabel: "Nachspeisen",
     icon: "assets/icons/desserts.svg",
     dishes: [
       {
@@ -183,6 +187,7 @@ let menu = [
   {
     category: "Getränke",
     slug: "getraenke",
+    navLabel: "Getränke",
     icon: "assets/icons/drinks.svg",
     dishes: [
       {

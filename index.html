@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./style/basket.css" />
   </head>
-  <body>
+  <body onload="init()">
     <header class="site-header">
       <div class="container">
         <img
@@ -50,43 +50,9 @@
           Mindestbestellwert 15 €
         </p>
       </div>
-      <nav class="category-nav" id="category-nav">
-        <!-- JS rendert die Links-->
-        <a href="#burger">Burger</a>
-        <a href="#pizza">Pizza</a>
-        <a href="#salate">Salate</a>
-        <a href="#beilagen">Beilagen</a>
-        <a href="#getraenke">Getränke</a>
-        <a href="#nachspeisen">Nachspeisen</a>
-      </nav>
+      <nav class="category-nav" id="category-nav"></nav>
       <div class="content-wrapper">
-        <section class="menu" id="menu">
-          <!--JS rendert die Kategorien-->
-          <section class="category" id="burger">
-            <div class="category-bar">
-              <img src="./assets/icons/burger.svg" alt="" />
-              <h2>Burger & Sandwiches</h2>
-            </div>
-
-            <div class="dish-list">
-              <article class="dish">
-                <img
-                  src="./assets/img/veggie-burger.jpg"
-                  alt="Veggie-Burger"
-                  class="dish-img"
-                />
-                <div class="dish-info">
-                  <h3 class="dish-name">Veggie Mushroom Black Burger</h3>
-                  <p class="dish-description">
-                    Gemischter Blattsalat, Tomaten, Edamame und Champignons
-                  </p>
-                </div>
-                <span class="dish-price">16,90 €</span>
-                <button class="add-btn">Zum Warenkorb</button>
-              </article>
-            </div>
-          </section>
-        </section>
+        <section class="menu" id="menu"></section>
         <aside class="basket-wrapper" id="basket-wrapper">
           <button class="basket-close">
             <img
@@ -107,26 +73,7 @@
               Abholen
             </button>
           </div>
-          <ul class="basket-list" id="basket-list">
-            <li class="basket-item">
-              <p class="basket-item-name">Veggie Mushroom Black Burger</p>
-              <div class="basket-item-row">
-                <div class="quantity">
-                  <button class="quantity-btn">
-                    <img src="./assets/icons/minus.svg" alt="Weniger" />
-                  </button>
-                  <span class="quantity-number">1</span>
-                  <button class="quantity-btn">
-                    <img src="./assets/icons/plus.svg" alt="Mehr" />
-                  </button>
-                </div>
-                <span class="basket-item-price">16,90 €</span>
-                <button class="basket-item-delete">
-                  <img src="./assets/icons/trash.svg" alt="Entfernen" />
-                </button>
-              </div>
-            </li>
-          </ul>
+          <ul class="basket-list" id="basket-list"></ul>
           <div class="basket-summary">
             <p>Zwischensumme <span id="subtotal">36,70 €</span></p>
             <p>Lieferkosten <span id="delivery-fee">4,99 €</span></p>
