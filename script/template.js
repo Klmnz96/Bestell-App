@@ -34,12 +34,12 @@ function getBasketItemTemplate(entry) {
     <p class="basket-item-name">${entry.name}</p>
     <div class="basket-item-row">
     <div class="quantity">
-    <button class="quantity-btn"><img src="./assets/icons/minus.svg" alt="Weniger" /></button>
+    <button class="quantity-btn" onclick="decreaseQuantity(${entry.id})"><img src="./assets/icons/minus.svg" alt="Weniger" /></button>
     <span class="quantity-number">${entry.quantity}</span>
-    <button class="quantity-btn"><img src="./assets/icons/plus.svg" alt="Mehr" /></button>
+    <button class="quantity-btn" onclick="increaseQuantity(${entry.id})"><img src="./assets/icons/plus.svg" alt="Mehr" /></button>
     </div>
     <span class="basket-item-price">${(entry.price * entry.quantity).toFixed(2)} €</span>
-    <button class="basket-item-delete"><img src="./assets/icons/trash.svg" alt="Entfernen" /></button>
+    <button class="basket-item-delete" onclick="removeFromBasket(${entry.id})"><img src="./assets/icons/trash.svg" alt="Entfernen" /></button>
     </div>
     </li>`;
 }
