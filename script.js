@@ -1,4 +1,26 @@
 let basket = [];
+let isPickup = false;
+
+function selectDelivery() {
+  isPickup = false;
+  document.getElementById("delivery-btn").classList.add("active");
+  document.getElementById("pickup-btn").classList.remove("active");
+  updateBasketSummary();
+}
+
+function selectPickup() {
+  isPickup = true;
+  document.getElementById("pickup-btn").classList.add("active");
+  document.getElementById("delivery-btn").classList.remove("active");
+  updateBasketSummary();
+}
+
+function placeOrder() {
+  basket = [];
+  renderBasket();
+  document.getElementById("confirmation").classList.add("visible");
+  document.getElementById("basket-wrapper").classList.remove("open");
+}
 
 function getDishById(id) {
   for (let i = 0; i < menu.length; i++) {
@@ -50,6 +72,14 @@ function removeFromBasket(id) {
   renderBasket();
 }
 
+function closeConfirmation() {
+  document.getElementById("confirmation").classList.remove("visible");
+}
+
+function toggleBasket() {
+  document.getElementById("basket-wrapper").classList.toggle("open");
+}
+
 function renderBasket() {
   let basketRef = document.getElementById("basket-list");
   basketRef.innerHTML = "";
@@ -61,10 +91,11 @@ function renderBasket() {
       basketRef.innerHTML += getBasketItemTemplate(basket[i]);
     }
   }
+  saveBasketToLocalStorage();
   updateBasketSummary();
 }
 
-function updateBasketSummary() {
+function calculateBasketTotals() {
   let subtotal = 0;
   let count = 0;
 
@@ -73,14 +104,28 @@ function updateBasketSummary() {
     count += basket[i].quantity;
   }
 
-  let deliveryFee = 4.99;
+  let deliveryFee = isPickup ? 0 : 4.99;
   let total = subtotal + deliveryFee;
 
-  document.getElementById("subtotal").textContent = subtotal.toFixed(2) + " €";
-  document.getElementById("total").textContent = total.toFixed(2) + " €";
-  document.getElementById("basket-count").textContent = count;
+  return {
+    subtotal: subtotal,
+    count: count,
+    deliveryFee: deliveryFee,
+    total: total,
+  };
+}
+
+function updateBasketSummary() {
+  let totals = calculateBasketTotals();
+
+  document.getElementById("delivery-fee").textContent =
+    totals.deliveryFee.toFixed(2) + " €";
+  document.getElementById("subtotal").textContent =
+    totals.subtotal.toFixed(2) + " €";
+  document.getElementById("total").textContent = totals.total.toFixed(2) + " €";
+  document.getElementById("basket-count").textContent = totals.count;
   document.getElementById("mobile-basket-total").textContent =
-    total.toFixed(2) + " €";
+    totals.total.toFixed(2) + " €";
 }
 
 function renderMenu() {
@@ -93,6 +138,7 @@ function renderMenu() {
 }
 
 function init() {
+  getBasketFromLocalStorage();
   renderMenu();
   renderCategoryNav();
   renderBasket();
@@ -104,5 +150,16 @@ function renderCategoryNav() {
 
   for (let i = 0; i < menu.length; i++) {
     navRef.innerHTML += getCategoryLinkTemplate(menu[i]);
+  }
+}
+
+function saveBasketToLocalStorage() {
+  localStorage.setItem("basket", JSON.stringify(basket));
+}
+
+function getBasketFromLocalStorage() {
+  let savedBasket = JSON.parse(localStorage.getItem("basket"));
+  if (savedBasket) {
+    basket = savedBasket;
   }
 }

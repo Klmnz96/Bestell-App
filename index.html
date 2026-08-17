@@ -54,21 +54,24 @@
       <div class="content-wrapper">
         <section class="menu" id="menu"></section>
         <aside class="basket-wrapper" id="basket-wrapper">
-          <button class="basket-close">
+          <button class="basket-close" onclick="toggleBasket()">
             <img
               src="./assets/icons/close.svg"
               alt="Schließen"
               class="basket-close"
             />
           </button>
-          <!--Warenkorb-->
           <h2>Dein Warenkorb</h2>
           <div class="delivery-toggle">
-            <button class="toggle-btn active" id="delivery-btn">
+            <button
+              class="toggle-btn active"
+              id="delivery-btn"
+              onclick="selectDelivery()"
+            >
               <img src="./assets/icons/delivery.svg" alt="" />
               Liefern
             </button>
-            <button class="toggle-btn" id="pickup-btn">
+            <button class="toggle-btn" id="pickup-btn" onclick="selectPickup()">
               <img src="./assets/icons/pickup.svg" alt="" />
               Abholen
             </button>
@@ -79,22 +82,28 @@
             <p>Lieferkosten <span id="delivery-fee">4,99 €</span></p>
             <p>Gesamt <span id="total">0,00 €</span></p>
           </div>
-          <button class="buy-btn">Jetzt bestellen</button>
+          <button class="buy-btn" onclick="placeOrder()">
+            Jetzt bestellen
+          </button>
         </aside>
       </div>
     </main>
 
     <div class="mobile-basket-bar">
-      <button class="mobile-basket-btn" id="mobile-basket-btn">
+      <button
+        class="mobile-basket-btn"
+        id="mobile-basket-btn"
+        onclick="toggleBasket()"
+      >
         <img src="./assets/icons/cart.svg" alt="" />
         <span class="basket-count" id="basket-count">0</span>
-        Warenkorb ansehen
+        <span class="mobile-basket-label">Warenkorb ansehen</span>
         <span id="mobile-basket-total">0,00 €</span>
       </button>
     </div>
 
     <div class="confirmation" id="confirmation">
-      <button class="confirmation-close">
+      <button class="confirmation-close" onclick="closeConfirmation()">
         <img src="./assets/icons/close.svg" alt="Schließen" />
       </button>
       <img src="./assets/icons/delivery.svg" alt="" class="confirmation-icon" />

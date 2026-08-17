@@ -22,6 +22,7 @@ main {
 }
 
 .container {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 16px;
@@ -271,6 +272,16 @@ main {
   cursor: pointer;
 }
 
+.basket-close {
+  width: 20px;
+  height: 20px;
+}
+
+.basket-close img {
+  width: 20px;
+  height: 20px;
+}
+
 .basket-list,
 .basket-wrapper {
   scrollbar-width: thin;
@@ -329,6 +340,10 @@ main {
 .confirmation-close img {
   width: 18px;
   height: 18px;
+}
+
+.confirmation.visible {
+  display: block;
 }
 
 .confirmation-icon {
@@ -450,7 +465,7 @@ main {
     display: block;
   }
 
-  .basket-close {
+  .basket-wrapper.open .basket-close {
     display: block;
     position: absolute;
     top: 16px;
@@ -531,5 +546,9 @@ main {
 @media (max-width: 355px) {
   .category-bar h2 {
     font-size: 16px;
+  }
+
+  .mobile-basket-label {
+    display: none;
   }
 }
