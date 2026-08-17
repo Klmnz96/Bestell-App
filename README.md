@@ -76,4 +76,4 @@ Then open `index.html` in the browser.
 
 ## Author
 
-All code in this project was written by me, Fabian Klemenz, as part of my training at Developer Akademie.
+All code in this project was written by, Fabian Klemenz, as part of my training at Developer Akademie.
