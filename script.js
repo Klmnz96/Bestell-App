@@ -78,6 +78,7 @@ function closeConfirmation() {
 
 function toggleBasket() {
   document.getElementById("basket-wrapper").classList.toggle("open");
+  document.body.classList.toggle("no-scroll");
 }
 
 function renderBasket() {
@@ -137,7 +138,34 @@ function renderMenu() {
   }
 }
 
+// vw-basierte Full-Bleed-Technik funktioniert hier nicht, weil .menu
+// nicht horizontal zentriert ist (Warenkorb-Sidebar daneben).
+// Deshalb exakter Abstand zum echten Bildschirmrand gemessen statt geschätzt.
+function setFullBleedOffsets() {
+  let menuRef = document.getElementById("menu");
+  let rect = menuRef.getBoundingClientRect();
+  let leftOffset = -rect.left;
+  let rightOffset = -(document.documentElement.clientWidth - rect.right);
+
+  document.documentElement.style.setProperty("--bleed-left", leftOffset + "px");
+  document.documentElement.style.setProperty(
+    "--bleed-right",
+    rightOffset + "px",
+  );
+}
+
+// Debounce: wartet 150ms nach dem letzten resize-Event, bevor neu
+// berechnet wird, sonsdt ruckelt es beim Ziehen am Fensterrand
+function setupFullBleedResize() {
+  let resizeTimer;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setFullBleedOffsets, 50);
+  });
+}
+
 function init() {
+  setupFullBleedResize();
   getBasketFromLocalStorage();
   renderMenu();
   renderCategoryNav();

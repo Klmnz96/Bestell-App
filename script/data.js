@@ -1,4 +1,4 @@
-let menu = [
+const menu = [
   {
     category: "Burger & Sandwiches",
     slug: "burger",
