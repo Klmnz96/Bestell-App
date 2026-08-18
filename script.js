@@ -121,7 +121,11 @@ function renderMenu() {
   menuRef.innerHTML = "";
 
   for (let i = 0; i < menu.length; i++) {
-    menuRef.innerHTML += getCategoryTemplate(menu[i]);
+    let dishesHTML = "";
+    for (let j = 0; j < menu[i].dishes.length; j++) {
+      dishesHTML += getDishTemplate(menu[i].dishes[j]);
+    }
+    menuRef.innerHTML += getCategoryTemplate(menu[i], dishesHTML);
   }
 }
 

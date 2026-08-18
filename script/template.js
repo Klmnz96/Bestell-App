@@ -10,12 +10,7 @@ function getDishTemplate(dish) {
     </article>`;
 }
 
-function getCategoryTemplate(category) {
-  let dishesHTML = "";
-
-  for (let i = 0; i < category.dishes.length; i++) {
-    dishesHTML += getDishTemplate(category.dishes[i]);
-  }
+function getCategoryTemplate(category, dishesHTML) {
   return `<section class="category" id="${category.slug}">
     <div class="category-bar">
     <img src="${category.icon}" alt="" />
