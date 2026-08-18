@@ -50,18 +50,12 @@ function addToBasket(id) {
   renderBasket();
 }
 
-function increaseQuantity(id) {
+function changeQuantity(id, amount) {
   let index = basket.findIndex((entry) => entry.id === id);
-  basket[index].quantity++;
-  renderBasket();
-}
-
-function decreaseQuantity(id) {
-  let index = basket.findIndex((entry) => entry.id === id);
-  if (basket[index].quantity > 1) {
-    basket[index].quantity--;
-  } else {
+  if (basket[index].quantity + amount <= 0) {
     basket.splice(index, 1);
+  } else {
+    basket[index].quantity += amount;
   }
   renderBasket();
 }
@@ -165,6 +159,7 @@ function setupFullBleedResize() {
 }
 
 function init() {
+  setFullBleedOffsets();
   setupFullBleedResize();
   getBasketFromLocalStorage();
   renderMenu();
