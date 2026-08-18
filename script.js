@@ -1,17 +1,10 @@
 let basket = [];
 let isPickup = false;
 
-function selectDelivery() {
-  isPickup = false;
-  document.getElementById("delivery-btn").classList.add("active");
-  document.getElementById("pickup-btn").classList.remove("active");
-  updateBasketSummary();
-}
-
-function selectPickup() {
-  isPickup = true;
-  document.getElementById("pickup-btn").classList.add("active");
-  document.getElementById("delivery-btn").classList.remove("active");
+function setDeliveryMethod(pickup) {
+  isPickup = pickup;
+  document.getElementById("delivery-btn").classList.toggle("active", !pickup);
+  document.getElementById("pickup-btn").classList.toggle("active", pickup);
   updateBasketSummary();
 }
 
@@ -148,13 +141,13 @@ function setFullBleedOffsets() {
   );
 }
 
-// Debounce: wartet 150ms nach dem letzten resize-Event, bevor neu
-// berechnet wird, sonsdt ruckelt es beim Ziehen am Fensterrand
+// Debounce: wartet 80ms nach dem letzten resize-Event, bevor neu
+// berechnet wird, sonst ruckelt es beim Ziehen am Fensterrand
 function setupFullBleedResize() {
   let resizeTimer;
   window.addEventListener("resize", function () {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(setFullBleedOffsets, 50);
+    resizeTimer = setTimeout(setFullBleedOffsets, 80);
   });
 }
 

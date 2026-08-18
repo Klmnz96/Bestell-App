@@ -66,12 +66,16 @@
             <button
               class="toggle-btn active"
               id="delivery-btn"
-              onclick="selectDelivery()"
+              onclick="setDeliveryMethod(false)"
             >
               <img src="./assets/icons/delivery.svg" alt="" />
               Liefern
             </button>
-            <button class="toggle-btn" id="pickup-btn" onclick="selectPickup()">
+            <button
+              class="toggle-btn"
+              id="pickup-btn"
+              onclick="setDeliveryMethod(true)"
+            >
               <img src="./assets/icons/pickup.svg" alt="" />
               Abholen
             </button>
